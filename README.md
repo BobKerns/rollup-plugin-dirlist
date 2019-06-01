@@ -1,4 +1,4 @@
-# rollup-plugin-dirlist-template
+# rollup-plugin-dirlist
 
 This plugin allows import of directories into a Javascript program, having them appear as an array of objects in your code.
 
