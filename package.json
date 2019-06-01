@@ -1,7 +1,7 @@
 {
-  "name": "npm-typescript-template",
+  "name": "rollup-plugin-dirlist",
   "version": "0.1.0",
-  "description": "Template project for typescript and rollup",
+  "description": "Rollup plugin to allow import of a directory listing as an array of objects with name, sizek etc.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.mjs",
   "scripts": {
@@ -15,12 +15,10 @@
     "clean": "rm -rf .rpt2_cache build lib devtools/build devtools/lib config/build config/lib",
     "prepublishOnly": "npm run clean && NODE_ENV=production npm run build"
   },
-  "bin": {
-    "hello": "bin/hello.jsq"
-  },
+  "bin": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BobKerns/npm-template.git"
+    "url": "git+https://github.com/BobKerns/rollup-plugin-debug.git"
   },
   "keywords": [
     "template",
@@ -31,9 +29,9 @@
   "author": "Bob Kerns",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BobKerns/npm-template/issues"
+    "url": "https://github.com/BobKerns/rollupro-plugin-dirlist/issues"
   },
-  "homepage": "https://github.com/BobKerns/npm-template#readme",
+  "homepage": "https://github.com/BobKerns/rollup-plugin-dirlist#readme",
   "dependencies": {
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.0",
