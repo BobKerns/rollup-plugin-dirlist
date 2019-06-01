@@ -29,7 +29,7 @@
   "author": "Bob Kerns",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BobKerns/rollupro-plugin-dirlist/issues"
+    "url": "https://github.com/BobKerns/rollup-plugin-dirlist/issues"
   },
   "homepage": "https://github.com/BobKerns/rollup-plugin-dirlist#readme",
   "dependencies": {
