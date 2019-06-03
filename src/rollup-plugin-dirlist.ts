@@ -9,12 +9,14 @@ import {createFilter} from 'rollup-pluginutils';
 export interface DirlistOptions {
     path: string;
     id: string;
-    include: string | string[];
-    exclude: string | string[];
+    include?: string | string[];
+    exclude?: string | string[];
 }
 
 export enum EntryType {
-    file, directory, link
+    file='file',
+    directory='directory',
+    link='link'
 }
 
 export type TimeStamp = string;
@@ -42,17 +44,17 @@ export type Entry = FileEntry | DirectoryEntry | LinkEntrry;
 
 export function dirlist({path: location, id, include, exclude}: DirlistOptions): Plugin {
     const fid = `dir:${id}`;
-    const filter = createFilter(include, exclude);
+    const filter = createFilter(include, exclude, {resolve: false});
     return {
         name: fid,
-        resolveId: (xid, parent) => {
-          if (((xid == id) && (xid !== fid)) || filter(parent)) {
-              return;
+        resolveId: (xid) => {
+          if (xid === fid) {
+              return xid;
           }
-          return xid;
+          return undefined;
         },
         load: async (xid) => {
-            if (((xid !== fid) && (xid !== id)) || !filter(xid)) {
+            if(xid !== fid) {
                 return null;
             }
             async function scan(p: string, parents: string): Promise<Entry[]> {
