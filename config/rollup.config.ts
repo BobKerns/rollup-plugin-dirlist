@@ -59,7 +59,9 @@ const spec: RollupOptions = {
 export default {
     input: ['src/index.ts'],
     output: outputs(pkg),
-
+    external: [
+        'path', 'fs', 'util'
+    ],
     plugins: [
         // dbg,
         resolve(),
