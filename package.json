@@ -33,8 +33,10 @@
   },
   "homepage": "https://github.com/BobKerns/rollup-plugin-dirlist#readme",
   "dependencies": {
+    "micromatch": "^4.0.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-pluginutils": "^2.8.0",
     "wcsize": "^1.0.0"
   },
   "devDependencies": {
