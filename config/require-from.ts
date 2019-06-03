@@ -3,7 +3,7 @@
  */
 
 /**
- * Require from one location as if it were from nother.
+ * Require from one location as if it were from another.
  */
 
 const fs = require('fs');
