@@ -2,7 +2,6 @@ import {dirlist} from '..';
 
 import path from 'path';
 import {PluginContext} from "rollup";
-import {createFilter} from "rollup-pluginutils";
 import {createMockProxy} from "jest-mock-proxy/lib";
 import {DirlistOptions} from "../../lib";
 
