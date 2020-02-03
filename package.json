@@ -2,18 +2,23 @@
   "name": "rollup-plugin-dirlist",
   "version": "0.1.0",
   "description": "Rollup plugin to allow import of a directory listing as an array of objects with name, sizek etc.",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.mjs",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "browser": "lib/umd/index.js",
+  "types": "lib/esm/index.d.ts",
   "scripts": {
-    "build:config": "tsc --project config/tsconfig.json",
+    "prebuild:config": "tsc --project config/tsconfig.json",
+    "build:config": "",
     "prebuild:devtools": "npm run build:config",
     "build:devtools": "tsc --project devtools/tsconfig.json",
-    "pretest": "npm run build",
+    "pretest": "tsc --project src/__tests__ && npm run build:config",
     "test": "jest",
     "prebuild": "npm run build:devtools",
     "build": "rollup -c",
-    "clean": "rm -rf .rpt2_cache build lib devtools/build devtools/lib config/build config/lib",
-    "prepublishOnly": "npm run clean && NODE_ENV=production npm run build"
+    "postbuild": "npm run build:docs",
+    "clean": "rm -rf build lib docs",
+    "prepublishOnly": "npm run clean && NODE_ENV=production npm run build",
+    "build:docs": "GRAPHVIZ_DOT=\"$(which dot)\" typedoc -out docs/api src/"
   },
   "bin": {},
   "repository": {
@@ -34,22 +39,24 @@
   "homepage": "https://github.com/BobKerns/rollup-plugin-dirlist#readme",
   "dependencies": {
     "micromatch": "^4.0.2",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-pluginutils": "^2.8.2",
     "wcsize": "^1.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.9.0",
-    "@types/ramda": "^0.26.39",
+    "@types/jest": "^24.9.1",
+    "@types/ramda": "^0.26.40",
     "jest": "^24.9.0",
-    "jest-mock-proxy": "^3.0.0",
     "ramda": "^0.26.1",
-    "rollup": "^1.29.0",
+    "rollup": "^1.31.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.0",
+    "rollup-pluginutils": "^2.8.2",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.21.2",
     "rollup-plugin-visualizer": "^1.1.1",
     "ts-jest": "^24.3.0",
+    "typedoc": "^0.16.9",
+    "typedoc-plantuml-extended": "0.0.1",
+    "typedoc-plugin-npm-externals": "^1.0.0",
     "typescript": "^3.7.5"
   }
 }
