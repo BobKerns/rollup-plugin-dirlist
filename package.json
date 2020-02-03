@@ -4,7 +4,6 @@
   "description": "Rollup plugin to allow import of a directory listing as an array of objects with name, sizek etc.",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "browser": "lib/umd/index.js",
   "types": "lib/esm/index.d.ts",
   "scripts": {
     "prebuild:config": "tsc --project config/tsconfig.json",
