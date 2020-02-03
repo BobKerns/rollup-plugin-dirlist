@@ -37,8 +37,6 @@
   },
   "homepage": "https://github.com/BobKerns/rollup-plugin-dirlist#readme",
   "dependencies": {
-    "micromatch": "^4.0.2",
-    "wcsize": "^1.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
@@ -49,6 +47,8 @@
     "jest-mock-proxy": "^3.0.0",
     "ramda": "^0.26.1",
     "rollup": "^1.31.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.21.2",
     "rollup-plugin-visualizer": "^1.1.1",
@@ -61,6 +61,7 @@
     "typedoc-plugin-external-module-name": "^3.0.0",
     "typedoc-plugin-mermaid": "=1.0.0",
     "mermaid": "^8.4.6",
-   "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "wcsize": "^1.0.0"
   }
 }
