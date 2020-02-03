@@ -20,6 +20,7 @@ log
 stdout
 stderr
 *.orig
+.#*
 
 public/bundle.*
 .env

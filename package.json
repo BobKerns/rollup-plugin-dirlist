@@ -42,20 +42,21 @@
     "wcsize": "^1.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "@types/jest": "^24.9.1",
     "@types/ramda": "^0.26.40",
     "jest": "^24.9.0",
     "ramda": "^0.26.1",
     "rollup": "^1.31.0",
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.0",
-    "rollup-pluginutils": "^2.8.2",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.21.2",
     "rollup-plugin-visualizer": "^1.1.1",
+    "rollup-pluginutils": "^2.8.2",
     "ts-jest": "^24.3.0",
-    "typedoc": "^0.16.9",
-    "typedoc-plantuml-extended": "0.0.1",
+    "typedoc": "^0.16.4",
+    "typedoc-plugin-external-module-name": "^3.0.0",
+    "typedoc-plugin-mermaid": "=1.0.0",
     "typedoc-plugin-npm-externals": "^1.0.0",
     "typescript": "^3.7.5"
   }
