@@ -2,8 +2,8 @@ import {dirlist} from '..';
 
 import path from 'path';
 import {PluginContext} from "rollup";
-import {createMockProxy} from "jest-mock-proxy/lib";
-import {DirlistOptions} from "../../lib";
+import {createMockProxy} from "jest-mock-proxy";
+import {DirlistOptions} from "../../lib/esm";
 
 describe("Plugin test", () => {
     const spec = {

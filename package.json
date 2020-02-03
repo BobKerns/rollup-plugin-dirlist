@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/BobKerns/rollup-plugin-dirlist#readme",
   "dependencies": {
+    "jest-mock-proxy": "^3.0.0",
     "micromatch": "^4.0.2",
     "wcsize": "^1.0.0"
   },
