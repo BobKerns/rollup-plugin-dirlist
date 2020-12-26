@@ -38,7 +38,7 @@ describe("Plugin test", () => {
             let plugin = dirlist(spec);
             // We may need a more complete implementation later.
             const ctx: PluginContext = <PluginContext>{};
-            expect(plugin.resolveId && await plugin.resolveId.call(ctx, 'dir:root', 'test'))
+            expect(plugin.resolveId && await plugin.resolveId.call(ctx, 'dir:root', 'test',{}))
                 .toEqual('dir:root');
         });
 
@@ -47,7 +47,7 @@ describe("Plugin test", () => {
             // We may need a more complete implementation later.
             const ctx: PluginContext = createMockProxy();
             // The doc says return null, the type declaration says undefined, and the rollup code doesn't care.
-            expect(plugin.resolveId && await plugin.resolveId.call(ctx, 'dir:other', 'test'))
+            expect(plugin.resolveId && await plugin.resolveId.call(ctx, 'dir:other', 'test', {}))
                 .not.toEqual(expect.anything);
         });
     });
