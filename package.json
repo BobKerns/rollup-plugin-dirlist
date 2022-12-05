@@ -62,7 +62,7 @@
     "rollup-plugin-terser": "^5.3.1",
     "rollup-plugin-typescript2": "^0.21.2",
     "rollup-plugin-visualizer": "^1.1.1",
-    "serve": "^11.3.2",
+    "serve": "^14.1.2",
     "ts-jest": "^26.4.4",
     "typedoc": "^0.23.21",
     "typedoc-plugin-external-module-name": "^3.1.0",
